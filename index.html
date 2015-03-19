@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Alice in mobileland</title>
+
+	<link href="http://fonts.googleapis.com/css?family=Squada+One|Belgrano|Corben" rel="stylesheet">
+
+	<link href="css/style.css" rel="stylesheet" />
+
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body>
+
+<div id="impress">
+
+	<div id="title" class="step" data-x="0" data-y="0">
+		<h1>Alice in mobileland</h1>
+		<figure><img src="img/img001.jpg" alt=""/></figure>
+		<blockquote>
+			What is the use of a book, without pictures or conversations?
+		</blockquote>
+		<cite>Alice</cite>
+	</div>
+	<div id="enter" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+		<p>Dentro la tana del Bianconiglio...</p>
+	</div>
+	<div id="design" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+		<p>Progettare e sviluppare per <span class="icon">N</span> <span class="icon">O</span> <span class="icon">Q</span></p>
+		<p>Mobile first o mobile last? Approcci diversi per un unico scopo: fornire all'utente un'esperienza adeguata al mezzo</p>
+	</div>
+	<div id="device-definition" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+		Qual è il 'mezzo'? Cosa si intende per mobile device:
+		<ul>
+			<li>feature phone</li>
+			<li>smartphone</li>
+			<li>tablet</li>
+		</ul>
+	</div>
+	<div id="context" class="step" data-x="250" data-y="3000" data-rotate="-90" data-scale="3">
+		Quali sono i contesti di utilizzo?
+		<p>Non solo <i>on the go</i>, ma anche <i>on the couch</i>. Contesti diversi portano a interazioni diverse, per necessità finali e per quantità di attenzione spesa a rapportarsi con l'interfaccia.</p>
+	</div>
+	<div id="budget" class="step" data-x="5000" data-y="300" data-rotate="-90" data-z="5000" data-scale="1">
+		Qual è il budget a disposizione? Una volta definito, quale aspetto può essere privilegiato? Scelte ingegneristiche o di usabilità?
+	</div>
+
+	<!-- fine prima parte -->
+
+	<div id="mobile-first" class="step" data-x="0" data-y="0" data-rotate="0" data-z="0" data-scale="4">
+		<h3>Mobile first</h3>
+		<p>Un unico sito che parte dai dispositivi mobili e si <i>adatta</i>, anche alla fruizione desktop e oltre(smart tv e ogni device che avrà accesso al web).</p>
+		<p>Ecco a voi la star degli ultimi anni: il <strong>responsive web design</strong></p>
+	</div>
+	<div id="darwin-quote" class="step big" data-x="1000" data-y="4500" data-rotate="-270" data-z="650" data-scale="12">
+		<blockquote>It is not the strongest of the species that survives, nor the most intelligent. It is the one that is the most <i>adaptable</i> to change.</blockquote>
+		<cite>Charles Darwin</cite>
+	</div>
+	<div id="rwd-base" class="step big" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+		La base del responsive è il css: dimensioni fluide e media query.
+	</div>
+	<div id="media-query-css" class="step smaller" data-x="-100" data-y="-100" data-z="100" data-scale="2" data-rotate="120">
+		Potenza delle media queries e del css in genere: facilità di implementazione e grande flessibilità. Dato che supportano gli attributi min- e max- width, le media queries possono essere usate sia in un contesto mobile first sia desktop first.
+	</div>
+	<div id="css-fluid" class="step" data-x="6700" data-y="-300" data-scale="6">
+		Esempio di fluidità:
+		<ul>
+			<li>Elementi strutturali in %</li>
+			<li>Padding e margini orizzontali in %</li>
+			<li>Font in rem</li>
+			<li>Misure legate al font in em (margini verticali)</li>
+		</ul>
+	</div>
+	<div id="media-query-example" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+		Esempi di media query:
+		<ul>
+			<li>nella <pre><code>head</code></pre> della pagina: <pre><code> &lt;link rel="stylesheet" href="screen.css" media="screen and (min-width: 400px)" /&gt; </code></pre></li>
+			<li>nel CSS, tipicamente al fondo del foglio di stile: <pre><code>@media screen (min-width: 400px){}</code></pre></li>
+		</ul>
+	</div>
+	<div id="media-query-params" class="step" class="step" data-x="700" data-y="300" data-scale="2">
+		Una media query accetta come parametro sia <pre><code>width</code></pre> (riferita alla viewport) sia <pre><code>device-width</code></pre>, riferita alla dimensione dello schermo del device.
+		<p>Si preferisce la prima scelta, perché permette di ridimensionare la finestra del browser desktop per simulare la viewport del dispositivo</p>
+	</div>
+	<div id="mobile-testing-debugging" class="step" data-x="100" data-y="1000" data-z="3000">
+		Testing e debugging per il mobile: non basta ridimensionare la finestra del browser, è necessario avere dei simulatori / emulatori o, meglio ancora, device fisici.
+		<p>Tra gli strumenti da prendere in considerazione, citiamo:</p>
+		<ul>
+			<li>Opera Mini simulator</li>
+			<li>Qualche simulatore BlackBerry (gli OS vanno da 4.5 a 7.1, i primi ormai obsoleti)</li>
+			<li>Android emulator su cui installare: Opera mobile, Firefox mobile, Opera Mini e Dolphin</li>
+			<li>Windows mobile emulator</li>
+		</ul>
+	</div>
+	<div id="breakpoint" class="step" data-x="-5000" data-y="-200" data-rotate="90" data-z="180">
+		Legata alla questione width <i>vs</i> device-width, vi è la questione breakpoint: quali sono le risoluzione da tenere in considerazione quando si impostano le media queries?
+	</div>
+	<div id="devices-breakpoint" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+		<p>Ora i più comuni sono iPhone / iPad, ma tutti i device Android (vedi immagine)?</p>
+		<p>Come impostare i breakpoint: in pixel o em?</p>
+	   <figure><img src="img/5knd.jpeg" alt="[Risoluzioni devices Android]"/></figure>
+	</div>
+
+	<div id="breakpoint-px-em" class="step smaller wide" data-x="-200" data-y="1300" data-scale="2">
+		<p>
+			Usando i pixel, è immediato individuare i breakpoint a seconda delle risoluzioni che ci interessano:
+		</p>
+		<pre><code>@media only screen and (min-width: 768px){}</code></pre>
+		<p>
+			Focalizzandosi invece sul contenuto, si capisce come la larghezza di una colonna sia determinata in funzione della dimensione del font e dell'interlinea, per ottimizzare la leggibilità, come avviene nella progettazione per la stampa.
+			Presumendo un font-size di base di 16px, la media query precedente diventa:
+		</p>
+		<pre><code>@media only screen and (min-width: 48em){}</code></pre>
+		<p>
+			Questo permette di applicare i cambiamenti di layout al cambiare del font-size, quando l'utente zooma, garantendogli così una layout ottimizzato.
+		</p>
+	</div>
+	<div id="progressive-enhancement" class="step" data-x="100" data-y="1000" data-z="3000">
+		Un'altra 'best practice' per il mobile: progressive enhancement, fornire soluzioni più eleganti e piacevoli man mano che le capacità del device aumentano.
+	</div>
+	<div id="progressive-enhancement-example" class="step smaller" data-x="1000" data-y="100" data-z="300">
+		Un esempio è l'uso spinto di regole CSS3 per tutte le parti presentazionali e anche di interazione, garantendo un supporto adeguato a browser meno capaci.
+		<p>Le transizioni di jQuery Mobile imitano le transizioni delle app native, ma sono create in CSS3 con una fallback per chi non supporta il 3D.</p>
+		<p>L'uso di Modernizr permette di approntare delle fallback per i browser meno capaci.</p>
+		<blockquote>
+			Progressive enhancement becomes an important strategy in order to deal with today and tomorrow’s diverse landscape. Start with a strong, semantic foundation, layer on styles smartly and add in unobtrusive Javascript to build up the experience. This allows us to reach more places while still delivering powerful experiences to iOS, Android and other more capable future browsers. It’s laying the foundation which we can then build upon.
+		</blockquote>
+		<cite>Brad Frost</cite>
+	</div>
+	<div id="responsive-issue" class="step" data-x="3500" data-y="750" data-rotate-x="-40" data-rotate-y="10" data-scale="5">
+		Ora i due problemi principali legati al RWD:
+		<ul>
+			<li>codice superfluo</li>
+			<li>gestione delle immagini</li>
+		</ul>
+	</div>
+	<div id="useless-code-issue" class="step" data-x="100" data-y="1000" data-z="3000">
+		Perché codice superfluo? Perché si possono facilmente nascondere delle sezioni ritenute poco utili sul mobile con una semplice regola css, ma questo non ferma il browser dallo scaricare tutto il codice di quella sezione: html, immagini, js, ecc.
+	</div>
+	<div id="image-issue" class="step" data-x="5900" data-y="-350" data-z="890" data-rotate="50">
+		La questione più annosa: la gestione delle immagini.
+		<p>Due ordini di problemi:</p>
+		<ul>
+			<li>fornire immagini ad alta risoluzione per i display hi-res (Retina, ad esempio)</li>
+			<li>fornire immagini della dimensione <i>necessaria</i></li>
+		</ul>
+	</div>
+	<div id="vectorial-images" class="step" data-x="6000" data-y="400" data-scale="3" data-z="1200">
+		Immagini vettoriali per essere indipendenti dalla risoluzione.
+		<p>
+			Una buona soluzione, scalare, &egrave; usare i font per la creazione della icone.
+			Vuoi sapere come? Seguici su <a href="#" class="icon fb">G</a>, <a href="#" class="icon tw">U</a> o iscriviti a <a href="#" class="icon rss">^</a>.
+		</p>
+		<p>
+			Anche per la creazione di loghi si può ricorrere ai vettori, utilizzando gli SVG, che però comportano un certo impegno per renderli cross-browser.
+		</p>
+	</div>
+	<div id="background-images" class="step" data-x="-6000" data-y="0" data-scale="3">
+		Un altro approccio coinvolge le immagini di background e le media queries:
+		individuando i device ad alta risoluzione (<pre><code>@media only screen and (min-device-pixel-ratio: 1.5)</code></pre>) &egrave; possibile assegnare un bg differente, specificando la dimensione del bg:
+		<pre><code>background-image: url('../img/sprite_icon@2x.png');<br/>background-size: 35px 125px
+		</code></pre>
+	</div>
+
+	<div id="content-images" class="step" data-x="6300" data-y="980" data-scale="6" data-rotate-x="340" data-rotate-y="58" data-z="690">
+		<p>Il problema principale riguarda le immagini di contenuto e il loro peso.</p>
+		<p>Il punto è servire la giusta dimensione di un’immagine per il  giusto tipo di device.</p>
+		Se è vero che è semplicissimo renderle proporzionali in css (<pre><code>img{max-width: 100%}</code></pre>),
+		è altrettanto vero che non ha senso far scaricare a un device mobile un'immagine da 300kb.
+	</div>
+	<div id="new-tag-attributes" class="step smaller" data-x="-2000" data-y="2500" data-scale="1" data-rotate-x="30" data-rotate-y="120" data-z="4500">
+		<p>La questione è dibattutissima e nessuno è ancora giunto a nessuna conclusione soddisfacente.</p>
+		W3C sta studiando un nuovo tag html (<pre><code>&lt;picture&gt;</code></pre>) che abbia un attributo che permetta di trasportare le informazioni sulle varie dimensioni. In alternativa, quasi in conflitto, un nuovo attributo (<pre><code>@srcset</code></pre>) del tag <pre><code><img/></code></pre>. Tutto questo per l’impossibilità di intervenire sul funzionamento del pre-parser del browser, che comincia a scaricare gli asset prima che il layout della pagina sia determinato.
+		In soluzioni responsive, data la fluidità delle immmagini, la loro dimensione sarà determinata solo dal calcolo finale compiuto dal motore di rendering del browser.
+	</div>
+	<div id="picture-example" class="step smaller wide" data-x="3900" data-y="-500" data-scale="4" data-rotate="120" data-z="500">
+		Esempio di <pre><code>&lt;picture&gt;</code></pre>:
+		<pre>
+			<code>
+			&lt;picture alt=""&gt;
+				&lt;source src="mobile.jpg" /&gt; &lt;!-- Matches by default. --&gt;
+				&lt;source src="high-res.jpg" media="min-width: 800px" /&gt;
+		&lt;!-- Overrides the previous source over 800px before any assets are fetched,
+		resulting in a single request. --&gt;
+				&lt;img src="mobile.jpg" /&gt; &lt;!-- Fallback content,
+		in the event the &lt;picture&gt; tag is completely
+		unsupported by the user’s browser. --&gt;
+			&lt;/picture&gt;
+			</code>
+		</pre>
+	</div>
+	<div id="srcset-example" class="step wide" data-x="900" data-y="3500" data-scale="4" data-rotate="-590" data-z="-980">
+		Esempio di <pre><code>@srcset</code></pre>
+		<pre>
+			<code>
+				&lt;img src="face-600-200@1.jpeg" alt=""
+					srcset="face-600-200@1.jpeg 600w 200h 1x,
+					face-600-200@2.jpeg 600w 200h 2x,
+					face-icon.png       200w 200h" /&gt;
+			</code>
+		</pre>
+	</div>
+	<div id="other-solutions" class="step" data-x="9500" data-y="7200" data-scale="6" data-rotate="70" data-z="8900">
+		Oltre queste proposte strutturali, esistono molte altre soluzioni che variano dall'uso del js e dei data-attribute (per simulare il funzionamento del tag  <pre><code>&lt;picture alt&gt;</code></pre>), a soluzioni lato server (in PHP).
+		<a href="https://docs.google.com/spreadsheet/ccc?key=0Al0lI17fOl9DdDgxTFVoRzFpV3VCdHk2NTBmdVI2OXc#gid=0">Christopher Schmitt</a> si è premurato di raccogliere molte (tutte?) soluzioni in una tabella.
+	</div>
+
+	<!-- conclusione -->
+
+	<div id="end" class="step smaller" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+		<blockquote>it's hard to build a great mobile experience with complete content and features. It takes careful thought and planning. But the obligation of design leaders is not to say, &quot;don't bother.&quot; It's to provide guidance on how to do it well. Responsive design, adaptive design, progressive enhancement, and progressive disclosure give us the technical tools we need to create a single website that works well on all sites. We're still learning to use those tools the right way.</blockquote>
+		<cite>Josh Clark su .net magazine, in rispsosta a Jakob Nielsen</cite>
+	</div>
+
+	<!--
+
+		So to make a summary of all the possible attributes used to position presentation steps, we have:
+
+		* `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+			the canvas in pixels; their default value is 0;
+		* `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+			the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+			are exactly the same;
+		* `data-scale` - defines the scale of step element; default value is 1
+
+		These values are used by impress.js in CSS transformation functions, so for more information consult
+		CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+
+	-->
+	<div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+	</div>
+
+</div>
+<footer>
+	Alice in Mobileland</time>
+</footer>
+<!--
+
+	Hint is not related to impress.js in any way.
+
+	But it can show you how to use impress.js features in creative way.
+
+	When the presentation step is shown (selected) its element gets the class of "active" and the body element
+	gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+	so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+	the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+
+	This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+	the first step of presentation is visible for a couple of seconds.
+
+	...
+
+	And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+	It's just a quick and dirty workaround to get different hint text for touch devices.
+	In a real world it should be at least placed in separate JS file ... and the touch content should be
+	probably just hidden somewhere in HTML - not hard-coded in the script.
+
+	Just sayin' ;)
+
+-->
+<div class="hint">
+	<p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) {
+	document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+
+	Last, but not least.
+
+	To make all described above really work, you need to include impress.js in the page.
+	I strongly encourage to minify it first.
+
+	In here I just include full source of the script to make it more readable.
+
+	You also need to call a `impress().init()` function to initialize impress.js presentation.
+	And you should do it in the end of your document. Not only because it's a good practice, but also
+	because it should be done when the whole document is ready.
+	Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+
+	The `impress()` function also gives you access to the API that controls the presentation.
+
+	Just store the result of the call:
+
+		var api = impress();
+
+	and you will get three functions you can call:
+
+		`api.init()` - initializes the presentation,
+		`api.next()` - moves to next step of the presentation,
+		`api.prev()` - moves to previous step of the presentation,
+		`api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+				id or the DOM element; second parameter can be used to define duration of the transition in ms,
+				but it's optional - if not provided default transition duration for the presentation will be used.
+
+	You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+	Don't worry, it wont initialize the presentation again.
+
+	For some example uses of this API check the last part of the source of impress.js where the API
+	is used in event handlers.
+
+-->
+
+</body>
+</html>
